@@ -1,0 +1,34 @@
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img
+        src="{{ img }}"
+        alt="{{ name }}"
+        style="width: 100%; height: 280px"
+      />
+      <h1 class="name">{{ name }}</h1>
+      <h3 class="id">N° {{ id }}</h3>
+      <div class="type">
+        <span class="type">Type: </span>
+        <span *ngFor="let type of types"
+          ><br />
+          - {{ type }}
+        </span>
+      </div>
+    </div>
+    <div class="flip-card-back">
+        <p style="margin-top: 40px"><fa-icon [icon]="faHeart"></fa-icon> Life :</p>
+        <p>{{ life }}</p>
+        <p><fa-icon [icon]="faBomb"></fa-icon> Damage :</p>
+        <p>{{ damage }}</p>
+        <p><fa-icon [icon]="faShieldAlt"></fa-icon> Defense :</p>
+        <p>{{ defense }}</p>
+        <p><fa-icon [icon]="faTextHeight"></fa-icon> Height :</p>
+        <p>{{ height }}</p>
+        <p><fa-icon [icon]="faWeight"></fa-icon> Weight :</p>
+        <p>{{ weight }}</p>
+        <p><fa-icon [icon]="faWeight"></fa-icon> Classification :</p>
+        <p>{{ classification }}</p>
+    </div>
+  </div>
+</div>

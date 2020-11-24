@@ -1,0 +1,28 @@
+<h1>ID Page</h1>
+<label for="name" class="labelInputId">Id : </label>
+<input
+  type="number"
+  class="inputId"
+  id="name"
+  name="name"
+  required
+  [min]="minId"
+  [max]="maxId"
+  [(ngModel)]="inputValue"
+/>
+
+<div class="cards">
+  <app-card
+    *ngFor="let element of valueCard | id : inputValue"
+    [name]="element.name"
+    [id]="element.id"
+    [types]="element.type"
+    [img]="element.img"
+    [life]="element.stats.hp"
+    [damage]="element.stats.attack"
+    [defense]="element.stats.defense"
+    [height]="element.misc.height"
+    [weight]="element.misc.weight"
+    [classification]="element.misc.classification"
+  ></app-card>
+</div>

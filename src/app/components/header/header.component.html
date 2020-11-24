@@ -1,0 +1,11 @@
+<div class="header">
+    <nav class="navbar-container">
+		<ul class="nav navbar">
+			<li class="nav-item" [ngClass]="{'active': route === '/index'}"><a [routerLink]="['/index']">HOME</a></li>
+			<li class="nav-item" [ngClass]="{'active': route === '/search'}"><a [routerLink]="['/search']">SEARCH</a></li>
+			<img class="nav-item pokelogo" src="../../../assets/img/LogoPokeball.png" (click)="redirect('index')"/>
+			<li class="nav-item" [ngClass]="{'active': route === '/id'}"><a [routerLink]="['/id']">ID</a></li>
+			<li class="nav-item" [ngClass]="{'active': route === '/type'}"><a [routerLink]="['/type']">TYPE</a></li>
+		</ul>
+	</nav>
+</div>

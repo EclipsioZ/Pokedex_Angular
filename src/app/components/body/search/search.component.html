@@ -1,0 +1,29 @@
+<h1>Search Page</h1>
+<label class="labelInputName" for="name">Search : </label>
+<input
+  type="text"
+  appAlphabetCheck
+  class="inputName"
+  id="name"
+  name="name"
+  required
+  maxlength="14"
+  size="10"
+  [(ngModel)]="inputValue"
+/>
+
+<div class="cards">
+  <app-card
+    *ngFor="let element of valueCard | searchPipe : inputValue"
+    [name]="element.name"
+    [id]="element.id"
+    [types]="element.type"
+    [img]="element.img"
+    [life]="element.stats.hp"
+    [damage]="element.stats.attack"
+    [defense]="element.stats.defense"
+    [height]="element.misc.height"
+    [weight]="element.misc.weight"
+    [classification]="element.misc.classification"
+  ></app-card>
+</div>

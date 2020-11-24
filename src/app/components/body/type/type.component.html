@@ -1,0 +1,21 @@
+<h1>Type Page</h1>
+<label for="name" class="labelSelectType">Type : </label>
+<select class="selectType" name="type" id="type"   [(ngModel)]="inputValue" placeholder="test">
+    <option *ngFor="let option of optionLists" value={{option}}>{{option}}</option>
+</select>
+
+<div class="cards">
+  <app-card
+    *ngFor="let element of valueCard | type : inputValue"
+    [name]="element.name"
+    [id]="element.id"
+    [types]="element.type"
+    [img]="element.img"
+    [life]="element.stats.hp"
+    [damage]="element.stats.attack"
+    [defense]="element.stats.defense"
+    [height]="element.misc.height"
+    [weight]="element.misc.weight"
+    [classification]="element.misc.classification"
+  ></app-card>
+</div>
